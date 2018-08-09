@@ -1,0 +1,439 @@
+*, *:after, *:before {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+}
+
+.left {
+  float:left;
+}
+
+.right {
+  float:right;
+}
+
+.row:after {
+  content: "";
+  clear:both;
+  display:table;
+}
+
+.article-header {
+  margin: 0 7px 50px 7px;
+}
+
+.non-fix-header {
+  height: 32px;
+  background-color: black;
+}
+
+.non-fix-header ul {
+  padding: 0 15px 0 20px;
+  margin:0;
+  height: 32px;
+}
+
+.non-fix-header li {
+  display: inline;
+  font-size: 13px;
+  font-weight: bold;
+  color:rgb(255,255,255,0.6);
+  line-height: 32px;
+  padding: 0 5px;
+}
+
+@media only screen and (max-width: 765px) {
+  .non-fix-header .right {
+    float: left;
+  }
+}
+
+@media only screen and (max-width: 711px) {
+  .non-fix-header {
+    height: 64px;
+  }
+}
+
+.head-top {
+  height: 48px;
+  background-color: white;
+}
+
+.head-top ul {
+  margin:0;
+  padding:0 15px 0 20px;
+  line-height: 48px;
+}
+
+.head-top li {
+  display: inline;
+  color:rgb(170,170,170);
+  font-size: 14px;
+  text-transform: uppercase;
+  padding:0 5px;
+}
+
+.head-bottom {
+  height: 30px;
+  background-color: rgb(255,221,51);
+}
+
+.head-bottom span {
+  line-height: 30px;
+  padding-left: 20px;
+  font-size: 13px;
+}
+
+@media only screen and (max-width: 765px) {
+  .fixed-header .head-top .right {
+    float:left;
+  }
+}
+
+.main-artic {
+  float:left;
+  height: 544px;
+  width:65%;
+  border:2px solid white;
+  position: relative;
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/7.png");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.artic-text {
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  color:white;
+}
+
+.artic-text h1 {
+  font-size: 56px;
+  padding: 0 10px 0 20px;
+  margin-top: 5px;
+}
+
+.artic .artic-text h1 {
+  font-size: 28px;
+}
+
+.artic-text p {
+  padding-left: 20px;
+}
+
+.secondary {
+  float:left;
+  width:35%;
+}
+
+.secondary .artic {
+  position: relative;
+  height: 272px;
+  border:2px solid white;
+}
+
+.secondary .artic:first-child {
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/1.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+.secondary .artic:last-child {
+  background: linear-gradient( rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("images/4.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
+@media only screen and (max-width: 765px) {
+  .main-artic {
+    height: 116px;
+    width: 100%;
+  }
+
+  .secondary {
+    width:100%;
+  }
+
+  .secondary .artic {
+    height: 116px;
+  }
+
+  .artic-text h1, .artic .artic-text h1 {
+    font-size: 25px;
+  }
+}
+
+.wrapper {
+  max-width: 1152px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.news {
+  float:left;
+  height: 251px;
+  width: 25%;
+  padding: 12px;
+}
+
+
+.news .news-artic {
+  height: 227px;
+}
+
+.news-artic img {
+  width:100%;
+}
+
+.news-artic h4 {
+  font-size: 16px;
+  margin:5px 5px;
+}
+
+.news-artic p {
+  font-size: 13px;
+  color:rgb(170,170,170);
+  margin:5px 5px;
+}
+
+.artic-header-text h1 {
+  color:rgb(255,68,34);
+  font-size: 28px;
+  font-weight: 600;
+  margin:25px 0 10px 0;
+  padding-left: 8px;
+}
+
+.artic-header-text-right li {
+  color:rgb(255,68,34);
+  display:inline;
+  padding:0;
+  line-height: 67px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-right: 1px solid rgb(255,68,34);
+}
+
+.artic-header-text-right li:last-child {
+  border: none;
+}
+.artic-header-text-right ul {
+  margin:10px 0 0 0;
+}
+
+.artic-header-text .fas {
+  vertical-align: bottom;
+}
+
+@media screen and (max-width: 765px) {
+  .funding-rounds .artic-header-text .right {
+    float:left;
+  }
+
+  .funding-rounds .artic-header-text .right ul {
+    padding-left: 0;
+  }
+
+}
+
+@media only screen and (max-width: 1023px) {
+  .news {
+    width: 33.33%;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .news {
+    height: 88px;
+    width:100%;
+    padding:8px;
+  }
+
+  .news .news-artic {
+    height: 72px;
+  }
+
+  .news-artic .img-crop {
+    width: 75px;
+    overflow: hidden;
+    float:left;
+    margin-right: 15px;
+  }
+
+  .news-artic img {
+    height:75px;
+    width: auto;
+  }
+}
+
+.funding {
+  float:left;
+  width: 25%;
+  height: 288px;
+  padding:12px;
+}
+
+.funding .funding-artic {
+  height: 264px;
+  position: relative;
+}
+
+.funding .funding-artic img {
+  position: absolute;
+  top:10px;
+  left:10px;
+
+}
+
+.funding .funding-artic h4 {
+  color:white;
+  background-color: rgb(255,68,34);
+  height: 39px;
+  line-height: 39px;
+  padding-left: 80px;
+  margin:0;
+}
+
+.funding .funding-artic h3 {
+  color:black;
+  background-color: rgb(255,68,34,0.08);
+  height: 56px;
+  line-height: 39px;
+  padding-left: 80px;
+  margin: 0;
+}
+
+.funding .funding-artic ul, .funding .funding-artic p {
+  background-color: rgb(255,68,34,0.04);
+  height: 81px;
+  margin: 0;
+}
+
+.funding .funding-artic li {
+  line-height: 35px;
+  color:rgb(85,85,85);
+}
+
+.p-center {
+  display:table;
+  border-top: 1px solid rgb(255,68,34,0.3);
+  width: 100%;
+}
+
+.p-center p {
+  display: table-cell;
+  vertical-align:middle;
+  padding-left: 15px;
+  color:rgb(85,85,85);
+}
+
+@media only screen and (max-width: 1023px) {
+  .funding {
+    width: 33.33%;
+  }
+
+  .funding:last-child {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  .funding {
+    width:100%;
+    height: 245px;
+    padding: 8px;
+    margin-bottom: 30px;
+  }
+
+  .funding .funding-artic {
+    height: 229px;
+  }
+}
+
+[class*="something-"] {
+  float: left;
+  height: 682px;
+  width: 33.33%;
+  padding:12px;
+}
+
+
+[class*="something-"] div {
+  height: 658px;
+  background-color: green;
+}
+
+@media only screen and (max-width: 1023px) {
+  [class*="something-"] {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 765px) {
+  [class*="something-"] {
+    height: 836px;
+    width: 100%;
+    padding: 8px;
+  }
+
+  [class*="something-"] div {
+    height: 820px;
+  }
+}
+
+.deals {
+  float:left;
+  width: 25%;
+  padding:12px;
+  height: 318px;
+}
+
+
+.deals .deals-artic {
+  height: 294px;
+  background-color: red;
+}
+
+@media only screen and (max-width: 1023px) {
+  .deals {
+    width: 33.33%;
+  }
+}
+
+@media only screen and (max-width:765px) {
+  .deals {
+    height: 88px;
+    width: 100%;
+    padding:8px;
+  }
+
+  .deals .deals-artic {
+    height: 72px;
+  }
+}
+
+footer {
+  position: absolute;
+  bottom:0;
+  left:0;
+  right:0;
+  margin-bottom: -257px;
+}
+
+.footer-links {
+  height: 160px;
+  background-color: grey;
+}
+
+.footer-legal {
+  height: 97px;
+  background-color: black;
+}
