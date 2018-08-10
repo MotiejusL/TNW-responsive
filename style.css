@@ -168,6 +168,15 @@ html {
 
   .artic-text h1, .artic .artic-text h1 {
     font-size: 25px;
+    padding-right: 0px;
+  }
+
+  .artic-text p {
+    margin:0 0;
+  }
+
+  .artic-text br {
+    display:none;
   }
 }
 
@@ -179,7 +188,6 @@ html {
 
 .news {
   float:left;
-  height: 251px;
   width: 25%;
   padding: 12px;
 }
@@ -189,8 +197,14 @@ html {
   height: 227px;
 }
 
+.news-artic .img-crop {
+  height: 145px;
+  overflow: hidden;
+}
+
 .news-artic img {
-  width:100%;
+  height: 145px;
+  width: auto;
 }
 
 .news-artic h4 {
@@ -247,6 +261,7 @@ html {
 @media only screen and (max-width: 1023px) {
   .news {
     width: 33.33%;
+    margin-bottom: 10px;
   }
 }
 
@@ -360,47 +375,168 @@ html {
 
 [class*="something-"] {
   float: left;
-  height: 682px;
   width: 33.33%;
   padding:12px;
+  margin-bottom: 0px;
 }
 
-
-[class*="something-"] div {
-  height: 658px;
-  background-color: green;
+.something .smth-img-container {
+  height: 276px;
+  overflow: hidden;
+  position: relative;
+  max-width: 100%;
 }
+
+.something .smth-img-container::after {
+  display: block;
+  position: relative;
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0) 0, rgb(0,0,0) 100%);
+  margin-top: -150px;
+  height: 100%;
+  width: 100%;
+  content: "";
+}
+
+.something .smth-img-container img {
+  height: 276px;
+  width: auto;
+}
+
+.something .smth-img-text {
+  position: absolute;
+  bottom: 15px;
+  left:15px;
+  color: white;
+  z-index: 1;
+}
+
+.something .smth-img-text h3 {
+  margin: 5px 0 5px 0;
+}
+
+.something .smth-img-text p {
+  margin: 5px 0 5px 0;
+}
+
+.something .smth-above-img {
+  height: 96px;
+  width: 100%;
+  overflow: hidden;
+  background-color: rgb(255,68,34,0.1)
+}
+
+.something .above-img-img-cont {
+  float:right;
+  width: 96px;
+}
+
+.something .smth-above-img img {
+  height: 100%;
+  width: auto;
+}
+
+.something .smth-above-img-text p:first-child {
+  color:rgb(255,68,34,0.8);
+  margin:20px 10px 0px 10px;
+}
+
+.something .smth-above-img-text p:last-child {
+  color:rgb(255,68,34);
+  margin: 0px 0px 10px 10px;
+  padding-right: 110px;
+  font-weight: bold;
+  line-height: 15px;
+}
+
+[class*=something-] ul {
+  padding: 5px 0 10px 16px;
+  margin:5px 0;
+}
+
+[class*=something-] li {
+  padding-bottom: 8px;
+  padding-top: 5px;
+  color:rgb(85,85,85);
+  border-bottom: 1px solid rgb(85,85,85,0.1);
+  list-style: none;
+}
+
+[class*=something-] li:before {
+  content: "• ";
+  color: rgb(255,68,34);
+  padding-right: 5px;
+}
+
 
 @media only screen and (max-width: 1023px) {
   [class*="something-"] {
     width: 50%;
   }
+
+  [class*="something-"] {
+    margin-bottom: 0px;
+  }
+
+  [class*="something-"] .artic-header-text h1 {
+    margin-top: 10px;
+  }
 }
 
 @media only screen and (max-width: 765px) {
   [class*="something-"] {
-    height: 836px;
+    height: 100%;
     width: 100%;
     padding: 8px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    padding-bottom: 0px;
   }
 
-  [class*="something-"] div {
-    height: 820px;
+  .artic-header-text h1 {
+    margin-top: 15px;
   }
+
+  .something .smth-img-container img {
+    height: 400px;
+  }
+
 }
 
 .deals {
   float:left;
   width: 25%;
   padding:12px;
-  height: 318px;
 }
 
 
 .deals .deals-artic {
-  height: 294px;
-  background-color: red;
+  height: 295px;
 }
+
+.deals .deals-artic img {
+  width: 100%;
+}
+
+
+.deals .deals-artic h4 {
+  font-size: 17px;
+  color:black;
+  margin: 5px 0;
+}
+
+.deals .deals-artic p {
+  display: inline;
+  font-size: 13px;
+  color:rgb(170,170,170);
+  text-decoration: line-through;
+}
+
+.deals .deals-artic span {
+  font-size: 16px;
+  color:rgb(85,85,85);
+}
+
 
 @media only screen and (max-width: 1023px) {
   .deals {
@@ -408,16 +544,47 @@ html {
   }
 }
 
-@media only screen and (max-width:765px) {
+@media only screen and (max-width: 765px) {
+
+  .latest-deals .artic-header-text {
+    display: table;
+    width: 100%;
+  }
+
+  .latest-deals .artic-header-text .right ul {
+    height: 76px;
+    margin-top: 0px;
+    display: table-cell;
+    vertical-align: middle;
+    padding-bottom: 12px;
+  }
+
   .deals {
     height: 88px;
-    width: 100%;
+    width:100%;
     padding:8px;
+  }
+
+  .deals:last-child {
+    margin-bottom: 40px;
   }
 
   .deals .deals-artic {
     height: 72px;
   }
+
+  .deals-artic .img-crop {
+    width: 75px;
+    overflow: hidden;
+    float:left;
+    margin-right: 15px;
+  }
+
+  .deals .deals-artic img {
+    height:75px;
+    width: auto;
+  }
+
 }
 
 footer {
@@ -425,15 +592,49 @@ footer {
   bottom:0;
   left:0;
   right:0;
-  margin-bottom: -257px;
+  margin-bottom: -280px;
 }
 
 .footer-links {
   height: 160px;
-  background-color: grey;
+  background-color: rgb(0,0,0,0.9);
+  text-align: center;
 }
 
 .footer-legal {
   height: 97px;
   background-color: black;
+  text-align: center;
+  display: table;
+  width: 100%;
+}
+
+.footer-legal p {
+  color:rgb(170,170,170);
+  margin: 0;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.footer-links .footer-icons {
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links .footer-icons li {
+  display:inline-block;
+  font-size: 14px;
+  padding:0 2px;
+  color:rgb(170,170,170);
+}
+
+.footer-icons .footer-link-icons .icons li {
+  color: white;
+  width: 40px;
+  height: 40px;
+  background-color: rgb(51,51,51);
+  border-radius: 50%;
+  line-height: 40px;
 }
